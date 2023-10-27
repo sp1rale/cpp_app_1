@@ -35,6 +35,5 @@ int main()
 	SetConsoleTextAttribute(hConsole, 10);
 	cout << "---------------------------------------------\n";
 	SetConsoleTextAttribute(hConsole, 7);
-   
 	return 0;
 }
