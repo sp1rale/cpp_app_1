@@ -1,18 +1,22 @@
 #include <iostream>
 #include <cmath>
+#include <Windows.h>
 using namespace std;
 
 int main()
 {
-	double R, R0, R1, R2, R3;
-	cout << "R1: ";
-	cin >> R1;
-	cout << "R2: ";
-	cin >> R2;
-	cout << "R3: ";
-	cin >> R3;
-	R0 = 1 / R1 + 1 / R2 + 1 / R3;
-	R = 1 / R0;
-	cout << "R: " << R;
+	const double pi = 3.14159;
+	double radius, volume;
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hConsole, 11);
+	cout<<"Enter the radius of the sphere->";
+	cin>>radius;
+	system("cls");
+	volume = (4.0 / 3.0) * pi * pow(radius, 3);
+	SetConsoleTextAttribute(hConsole, 10);
+	cout << "----------------------------------------\n";
+	cout<<"The volume of the sphere is "<<volume<<endl;
+	cout <<"----------------------------------------\n";
+	SetConsoleTextAttribute(hConsole, 7);
 	return 0;
 }
