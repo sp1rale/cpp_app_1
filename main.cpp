@@ -1,18 +1,21 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main()
 {
-	double R, R0, R1, R2, R3;
-	cout << "R1: ";
-	cin >> R1;
-	cout << "R2: ";
-	cin >> R2;
-	cout << "R3: ";
-	cin >> R3;
-	R0 = 1 / R1 + 1 / R2 + 1 / R3;
-	R = 1 / R0;
-	cout << "R: " << R;
+	int grivnas, kopiykas;
+	cout << "Enter grivnas: ";
+	cin >> grivnas;
+	cout << "Enter kopiykas: ";
+	cin >> kopiykas;
+	if (kopiykas >= 100){
+	int additionalGrivnas = kopiykas / 100;
+	grivnas += additionalGrivnas;
+	kopiykas %= 100;
+	}
+	cout << "Grivnas: " << grivnas << endl;
+	cout << "Kopiykas: " << kopiykas << endl;
+
 	return 0;
-}
+}	
+	
